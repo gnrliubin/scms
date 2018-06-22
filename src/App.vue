@@ -5,7 +5,10 @@
   <el-header>Header</el-header>
   <el-container>
     <el-aside width="200px">Aside</el-aside>
-    <el-main>Main</el-main>
+    <el-main>
+      {{ss}}
+      <button @click="getstate">a</button>
+    </el-main>
   </el-container>
 </el-container>
 
@@ -17,9 +20,17 @@
 <script>
 export default {
   name: 'App',
-  created:()=>{
-    console.log(this.$store)
- }
+  data(){
+    return{
+      ss:'3'
+    }
+  },
+  methods:{
+    getstate () {
+      console.log(this.$store)
+      this.ss= this.$store.state.count
+    }
+  }
 }
 
 </script>

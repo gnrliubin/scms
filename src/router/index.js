@@ -23,7 +23,8 @@ Vue.use(Router)
 router.beforeEach((to,from,next)=>{
   alert('路由全局守卫')
   store.commit('increment')
-  console.log(this)
+  console.log(this) //这个this是router
+  console.log(this.$store)  //undefined
 })
 
 export default router

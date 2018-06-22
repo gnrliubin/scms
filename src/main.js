@@ -18,7 +18,7 @@ Vue.use(ElementUI);
 new Vue({
   el: '#app',
   router,
-  store,
+  store,  //全局注入store ，测试vue生命周期到mounted方法中this.$store为undefined，后续方法没有测试
   components: { App },
   template: '<App/>'
 })
