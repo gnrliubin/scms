@@ -5,10 +5,14 @@
                 <Nav></Nav>
             </el-header>
             <el-container>
-                <el-aside width="200px">
+                <el-aside width="auto">
                     <aside-menu></aside-menu>
+                    
                 </el-aside>
-                <el-main>Main</el-main>
+                <el-main>
+                    <!-- <main-test></main-test> -->
+                    <router-view></router-view>
+                </el-main>
             </el-container>
         </el-container>
     </div>
@@ -16,11 +20,16 @@
 
 <script>
     import {Nav,AsideMenu} from './subcomponents'
+    import MainTest from '@/components/view/MainTest'       //引入单个组件用{}方式会报错
     export default  {
         name:'Layout',
         components:{
             Nav,
-            AsideMenu
+            AsideMenu,
+            MainTest
+        },
+        methods:{
+            
         }
     }
 </script>
@@ -33,7 +42,7 @@
   }
   
   .el-aside {
-    background-color: #D3DCE6;
+    background-color: #545c64;
     color: #333;
     text-align: center;
     line-height: 200px;
@@ -58,11 +67,14 @@
   .el-container:nth-child(7) .el-aside {
     line-height: 320px;
   }
-
+/**************修改默认值********************/
     #layout{
         height:100%
     }
     .el-container {  
         height: 100%;
+    }
+    .el-aside{
+        text-align:left;
     }
 </style>

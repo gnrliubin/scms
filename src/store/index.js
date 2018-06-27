@@ -4,16 +4,20 @@ import Vuex from 'vuex';
 Vue.use(Vuex)   //放在main.js中无效
 
 const state={
-  count:0
+  count:0,
+  asideIsCollapse:false,
 }
 
 
 const store = new Vuex.Store({
-  state:state,
+  state,
   mutations: {
     increment (state) {
       state.count++
-    }
+    },
+    // asideCollapse(state){
+    //   state.asideIsCollapse=!state.asideIsCollapse
+    // }
   }
 })
 

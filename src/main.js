@@ -8,6 +8,8 @@ import 'element-ui/lib/theme-chalk/index.css';
 
 import store from './store'
 
+import '../static/iconfont/iconfont.css'
+
 
 Vue.config.productionTip = false;
 
