@@ -11,6 +11,7 @@
                 </el-aside>
                 <el-main>
                     <!-- <main-test></main-test> -->
+                    <button @click = "login">sdfd</button>
                     <router-view></router-view>
                 </el-main>
             </el-container>
@@ -29,7 +30,12 @@
             MainTest
         },
         methods:{
-            
+            login(){
+                if(this.$store.state.userInfo.name == "游客")
+                    this.$store.state.userInfo.name = "刘斌"
+                else
+                    this.$store.state.userInfo.name = "游客"
+            }
         }
     }
 </script>
