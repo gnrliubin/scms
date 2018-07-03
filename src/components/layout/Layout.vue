@@ -31,10 +31,10 @@
         },
         methods:{
             login(){
-                if(this.$store.state.userInfo.name == "游客")
-                    this.$store.state.userInfo.name = "刘斌"
+                if(this.$store.state.user.name == "游客")
+                    this.$store.state.user.name = "刘斌"
                 else
-                    this.$store.state.userInfo.name = "游客"
+                    this.$store.state.user.name = "游客"
             }
         }
     }

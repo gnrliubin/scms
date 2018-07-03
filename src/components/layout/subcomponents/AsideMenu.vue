@@ -92,7 +92,7 @@
     },
   computed:{
     isCollapse(){
-      return this.$store.state.asideIsCollapse
+      return this.$store.state.app.asideIsCollapse
     }
     },
     

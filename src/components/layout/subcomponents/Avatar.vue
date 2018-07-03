@@ -32,16 +32,16 @@
         },
         computed: {
             avatarUrl() {
-                return this.$store.state.userInfo.avatar
+                return this.$store.state.user.avatar
             },
             logged(){
-                if (this.$store.state.userInfo.name=="游客")
+                if (this.$store.state.user.name=="游客")
                     return false
                 else 
                     return true     
             },
             userName(){
-                return this.$store.state.userInfo.name
+                return this.$store.state.user.name
             }
         }
 

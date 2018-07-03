@@ -1,6 +1,9 @@
 import Vue from "vue";
 import Vuex from 'vuex';
 import state from './state'
+import user from './modules/user'
+import app from './modules/app'
+
 Vue.use(Vuex)   //放在main.js中无效
 
 // const state={
@@ -9,10 +12,14 @@ Vue.use(Vuex)   //放在main.js中无效
 
 
 const store = new Vuex.Store({
-  state,
-  mutations: {
+  // state,
+  modules:{
+    app,
+    user,
+  },
+  // mutations: {
     
-  }
+  // }
 })
 
 

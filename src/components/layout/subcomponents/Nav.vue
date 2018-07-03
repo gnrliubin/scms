@@ -54,7 +54,7 @@
         },
         computed:{
             isActive(){
-                return this.$store.state.asideIsCollapse
+                return this.$store.state.app.asideIsCollapse
             }
         },
         methods: {
@@ -62,7 +62,7 @@
                 console.log(key, keyPath);
             },
             asideTiggle(){
-                this.$store.state.asideIsCollapse=!this.$store.state.asideIsCollapse
+                this.$store.state.app.asideIsCollapse=!this.$store.state.app.asideIsCollapse
             }
         }
     }
