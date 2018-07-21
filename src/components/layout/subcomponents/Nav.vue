@@ -1,6 +1,6 @@
 <template>
     <div id="nav-container">
-        <span class="hamburger-container iconfont icon-hanbaotubiao" :class="{active:isActive}" @click="asideTiggle"></span>
+        <span class="hamburger-container iconfont icon-hanbaotubiao" :class="{active:isActive}" @click="asideToggle"></span>
         
         <el-menu
     :default-active="activeIndex2"
@@ -61,9 +61,11 @@
             handleSelect(key, keyPath) {
                 console.log(key, keyPath);
             },
-            asideTiggle(){
-                this.$store.state.app.asideIsCollapse=!this.$store.state.app.asideIsCollapse
+            asideToggle(){
+                // this.$store.commit('asideToggle')   //没有命名空间是，所有modules中的同名mutation都会响应
+                this.$store.commit('app/asideToggle')
             }
+           
         }
     }
 </script>
